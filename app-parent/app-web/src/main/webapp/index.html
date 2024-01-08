@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 5</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <div id="contenedor">
+
+    <form class="Form" onsubmit="event.preventDefault();">
+      <button class="botones" type="submit" onclick="getPokemon()">Obtener Pokemon</button>
+      <label for="pokemonId">Id:
+        <input type="number" name="id" id="pokemonId" min="1" max="1017" required />
+      </label>
+    </form>
+
+    <form class="Form" onsubmit="event.preventDefault();">
+      <button class="botones" type="submit" onclick="getCovidUSData()">Obtener Covid US</button>
+      <label for="covidDate">Fecha:
+        <input type="date" name="date" id="covidDate" required />
+      </label>
+      <label class="fechas">[13/01/2020 a 07/03/2021]</label>
+    </form>
+
+    <form class="Form" onsubmit="event.preventDefault();">
+      <button class="botones" type="submit" onclick="getPost()">Obtener Placeholder Posts</button>
+      <label for="postId">Id:
+        <input type="number" name="id" id="postId" min="1" max="100" required />
+      </label>
+    </form>
+    <div class="respuesta">
+      <table id="content"></table>
+    </div>
+
+    <script src="getData.js"></script>
+
+  </div>
+</body>
+
+</html>
